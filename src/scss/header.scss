@@ -1,0 +1,50 @@
+.header{
+	
+	.container-header{
+		
+		.header-wrap{
+			margin: 35px auto 25px;
+			height: 20vh;
+			background-color: rgba(124, 81, 126, 0.2);
+			border: 1px solid rgb(124, 76, 113);
+			border-radius: 25px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 5vw;
+			@media (max-width:776px){
+				height: 100px;
+			}	
+
+			&-logo{
+				& span {
+					font-family: 'Montserrat';
+					font-style: normal;
+					font-weight: 700;
+					font-size: 5vh;
+					@media (max-width:776px){
+						font-size: 20px;						
+					}
+				}
+			}
+
+			&-clock{
+				background-color: white;
+				border: 1px solid rgba(145, 145, 145, 0.886);
+				font-size: 5vh;
+				border-radius: 2vh;
+				height: 40%;
+				width: 150px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				@media (max-width:776px){
+					font-size: 20px;
+					height: 50px;
+					width: 100px;
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,388 @@
+.card{
+	.container-card{
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: nowrap;
+		flex-direction: row;
+		.card-todo{
+			width: 30%;
+			border: 1px solid grey;
+			border-radius: 15px;
+			height: 70vh;
+			&-item{
+				height: 15%;
+				border-bottom: 1px solid grey;
+				border-radius: 15px;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				background-color: rgba(128, 128, 128, 0.2);
+				& span {
+					font-size: 18px;
+   				font-family: Montserrat;
+   				font-weight: 500;
+				}
+				&-sum{
+					font-size: 18px;
+   				font-family: Montserrat;
+   				font-weight: 500;
+				}
+			}
+			&-task{
+				height: 70%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 20px;
+				overflow-y: auto;
+				scroll-behavior: smooth;
+				padding: 10px 0;
+
+				.todo-wrap{
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					align-items: center;
+
+					width: 80%;
+					min-height: 100px;
+					border: 1px solid green;
+					border-radius: 15px;
+					padding: 5px 10px;
+					&-title{
+						display: flex;
+						justify-content: space-between;
+						width: 100%;
+						&-text{
+							max-width: 50%;
+						}
+						&-btn{
+							display: flex;
+							gap: 15px;							
+							& button {
+								padding: 2px;
+							}
+						}
+						
+					}
+					&-description{
+						display: flex;
+						justify-content: space-between;
+						width: 100%;
+						&-text{
+							max-width: 80%;
+						}
+						& button {
+							padding: 10px 1px;
+						}
+					}
+
+				}
+			}
+			&-add{
+				height: 15%;
+				border-top: 1px solid grey;
+				border-radius: 15px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: rgba(128, 128, 128, 0.2);
+				cursor: pointer;
+				& span {
+					font-size: 18px;
+   				font-family: Montserrat;
+   				font-weight: 500;
+				}
+			}
+			&-create{
+				display: none;
+				flex-direction: column;
+				padding: 15px 25px;
+				position: absolute;
+				width: 400px;
+				height: 300px;
+				border: 1px solid black;
+				border-radius: 25px;
+				left: 33%;
+				top: 0;
+				background-color: rgb(207, 229, 228);
+				.title-add{
+					border: 1px solid black;
+					width: 40%;
+					padding: 8px 3px;
+					font-size: 16px;
+					border-radius: 5px;
+					margin-bottom: 25px;
+					&::placeholder{
+						margin: auto;
+						color: black;
+					}
+
+				}
+				.description-add{
+					border: 1px solid black;
+					width: 80%;
+					height: 50%;
+					padding: 8px 3px;
+					font-size: 20px;
+					border-radius: 8px;
+					margin-bottom: 25px;
+					&::placeholder{
+						margin: auto;
+						color: black;
+					}
+				}
+				&-activ{
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					&-user{
+						display: flex;
+						border: 1px solid black;
+						width: 100px;
+						justify-content: center;
+						align-items: center;
+						background-color: #fff;
+						
+					}
+					&-btn{
+						display: flex;
+						flex-direction: row;
+						&-cancel{
+						display: flex;
+						border: 1px solid black;
+						width: 70px;
+						justify-content: center;
+						align-items: center;
+						padding: 3px 0;
+						cursor: pointer;
+						margin-right: 20px;
+						background-color: #fff;
+						}
+						&-confirm{
+						display: flex;
+						border: 1px solid black;
+						width: 70px;
+						justify-content: center;
+						align-items: center;
+						padding: 3px 0;
+						cursor: pointer;
+						margin-right: 20px;
+						background-color: #fff;
+						}
+						&-replace{
+							display: none;
+							border: 1px solid black;
+							width: 70px;
+							justify-content: center;
+							align-items: center;
+							padding: 3px 0;
+							cursor: pointer;
+							margin-right: 20px;
+							background-color: #fff;
+							}
+					}
+
+				}
+
+			}
+		}
+		.card-progress{
+			width: 30%;
+			border: 1px solid rgb(73, 200, 61);
+			border-radius: 15px;
+			height: 70vh;
+			&-item{
+				height: 15%;
+				border-bottom: 1px solid grey;
+				border-radius: 15px;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				background-color: rgba(128, 128, 128, 0.2);
+				& span {
+					font-size: 18px;
+   				font-family: Montserrat;
+   				font-weight: 500;
+				}
+				&-sum{
+					font-size: 18px;
+   				font-family: Montserrat;
+   				font-weight: 500;}
+			}
+			&-task{
+				height: 85%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 20px;
+				overflow-y: auto;
+				scroll-behavior: smooth;
+				padding: 10px 0;
+
+				.todo-wrap{
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					align-items: center;
+
+					width: 80%;
+					min-height: 100px;
+					border: 1px solid rgb(134, 139, 134);
+					
+					border-radius: 15px;
+					padding: 5px 10px;
+					&-title{
+						display: flex;
+						justify-content: space-between;
+						width: 100%;
+						&-text{
+							max-width: 50%;
+						}
+						&-btn{
+							display: flex;
+							gap: 15px;							
+							& button {
+								padding: 2px;
+							}
+						}
+						
+					}
+					&-description{
+						display: flex;
+						justify-content: space-between;
+						width: 100%;
+						&-text{
+							max-width: 80%;
+						}
+						& button {
+							padding: 10px 1px;
+						}
+					}
+
+				}
+			}
+
+		}
+		.card-done {
+			width: 30%;
+			border: 1px solid grey;
+			border-radius: 15px;
+			height: 70vh;
+			&-item{
+				height: 15%;
+				border-bottom: 1px solid grey;
+				border-radius: 15px;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				background-color: rgba(128, 128, 128, 0.2);
+				& span {
+					font-size: 18px;
+   				font-family: Montserrat;
+   				font-weight: 500;
+				}
+				&-sum{
+					font-size: 18px;
+   				font-family: Montserrat;
+   				font-weight: 500;}
+			}
+			&-task{
+				height: 70%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 20px;
+				overflow-y: auto;
+				scroll-behavior: smooth;
+				padding: 10px 0;
+				.todo-wrap{
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					align-items: center;
+
+					width: 80%;
+					min-height: 100px;
+					border: 1px solid rgb(134, 139, 134);
+					
+					border-radius: 15px;
+					padding: 5px 10px;
+					&-title{
+						display: flex;
+						justify-content: space-between;
+						width: 100%;
+						&-text{
+							max-width: 50%;
+						}
+						&-btn{
+							display: flex;
+							gap: 15px;							
+							& button {
+								padding: 2px;
+							}
+						}
+						
+					}
+					&-description{
+						display: flex;
+						justify-content: space-between;
+						width: 100%;
+						&-text{
+							max-width: 80%;
+						}
+						& button {
+							padding: 10px 1px;
+						}
+					}
+
+				}
+			}
+			&-delete{
+				height: 15%;
+				border-top: 1px solid grey;
+				border-radius: 15px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: rgba(128, 128, 128, 0.2);
+				cursor: pointer;
+				& span {
+					font-size: 18px;
+   				font-family: Montserrat;
+   				font-weight: 500;
+				}
+			}
+			.warning{
+				display: none;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-around;
+				padding: 15px 25px;
+				position: absolute;
+				width: 250px;
+				height: 150px;
+				border: 1px solid black;
+				border-radius: 25px;
+				left: 41%;
+				top: 0;
+				background-color: rgb(207, 229, 228);
+				&-text{
+					font-size: 24px;
+					font-weight: 700;
+				}
+				&-btn{
+					justify-content: space-around;
+					display: flex;
+					align-items: center;
+					width: 100%;
+					& button {
+						padding: 4px 7px;
+						font-size: 14px;						
+					}
+				}
+			}
+		}
+		
+	}
+}

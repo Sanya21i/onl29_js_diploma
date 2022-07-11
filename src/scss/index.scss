@@ -1,0 +1,19 @@
+@import url(./style.scss);
+@import url(./header.scss);
+@import url(./card.scss);
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+.container{
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: auto;
+	position: relative;
+	z-index: 2;
+}

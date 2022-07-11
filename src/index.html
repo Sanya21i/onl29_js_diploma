@@ -11,7 +11,77 @@
 </head>
 
 <body>
+	<header class="header">
+		<div class="container container-header">
+			<div class="header-wrap">
+				<div class="header-wrap-logo"><span>Trello</span> </div>
+				<div class="header-wrap-clock" id="clock"></div>
+			</div>
 
+		</div>
+	</header>
+	<section class="card">
+		<div class="container container-card">
+			<div class="card-todo" id="card-todo">
+				<div class="card-todo-item">
+					<div class="card-todo-item-text">
+						<span>TODO:</span>
+					</div>
+					<div class="card-todo-item-sum" id="card-todo-item-sum"></div>
+				</div>
+				<div class="card-todo-task" id="card-todo-task">
+				</div>
+				<div class="card-todo-add" id="card-todo-add">
+					<span>Add todo</span>
+				</div>
+				<div class="card-todo-create" id="card-todo-create">
+					<input type="text" class="title-add" id="title-add" placeholder="Title">
+					<input type="text" class="description-add" id="description-add" placeholder="Description">
+					<div class="card-todo-create-activ">
+						<div class="card-todo-create-activ-user">Select user</div>
+						<div class="card-todo-create-activ-btn">
+							<div class="card-todo-create-activ-btn-cancel" id="card-todo-create-activ-btn-cancel">Cancel</div>
+							<div class="card-todo-create-activ-btn-confirm" id="card-todo-create-activ-btn-confirm">Confirm
+							</div>
+							<div class="card-todo-create-activ-btn-replace" id="card-todo-create-activ-btn-replace">Replace
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="card-progress" id="card-progress">
+				<div class="card-progress-item">
+					<div class="card-progress-item-text">
+						<span>IN PROGRESS</span>
+					</div>
+					<div class="card-progress-item-sum" id="card-progress-item-sum"></div>
+				</div>
+				<div class="card-progress-task" id="card-progress-task">
+				</div>
+			</div>
+			<div class="card-done">
+				<div class="card-done-item">
+					<div class="card-done-item-text">
+						<span>DONE</span>
+					</div>
+					<div class="card-done-item-sum" id="card-done-item-sum"></div>
+				</div>
+				<div class="card-done-task" id="card-done-task"></div>
+				<div class="card-done-delete" id="card-done-delete">
+					<span>Delete all</span>
+				</div>
+				<div class="warning" id="warning">
+					<div class="warning-text">Warning!!!</div>
+					<div class="warning-btn">
+						<button id="warning-cancel">Cancel</button>
+						<button id="warning-delete">Delete all</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
 
 
 
