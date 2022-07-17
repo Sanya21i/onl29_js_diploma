@@ -29,7 +29,7 @@
 					</div>
 					<div class="card-todo-item-sum" id="card-todo-item-sum"></div>
 				</div>
-				<div class="card-todo-task" id="card-todo-task">
+				<div class="card-todo-task choice" id="card-todo-task">
 				</div>
 				<div class="card-todo-add" id="card-todo-add">
 					<span>Add todo</span>
@@ -38,7 +38,15 @@
 					<input type="text" class="title-add" id="title-add" placeholder="Title">
 					<input type="text" class="description-add" id="description-add" placeholder="Description">
 					<div class="card-todo-create-activ">
-						<div class="card-todo-create-activ-user">Select user</div>
+						<div class="card-todo-create-activ-users" id="card-todo-create-activ-users">
+							<select size="1" autofocus class="card-todo-create-activ-users-select"
+								id="card-todo-create-activ-users-select">
+								<option value="select-user" selected disabled>Select users</option>
+							</select>
+
+
+						</div>
+
 						<div class="card-todo-create-activ-btn">
 							<div class="card-todo-create-activ-btn-cancel" id="card-todo-create-activ-btn-cancel">Cancel</div>
 							<div class="card-todo-create-activ-btn-confirm" id="card-todo-create-activ-btn-confirm">Confirm
@@ -57,7 +65,7 @@
 					</div>
 					<div class="card-progress-item-sum" id="card-progress-item-sum"></div>
 				</div>
-				<div class="card-progress-task" id="card-progress-task">
+				<div class="card-progress-task choice" id="card-progress-task">
 				</div>
 			</div>
 			<div class="card-done">
@@ -67,7 +75,7 @@
 					</div>
 					<div class="card-done-item-sum" id="card-done-item-sum"></div>
 				</div>
-				<div class="card-done-task" id="card-done-task"></div>
+				<div class="card-done-task choice" id="card-done-task"></div>
 				<div class="card-done-delete" id="card-done-delete">
 					<span>Delete all</span>
 				</div>
