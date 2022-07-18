@@ -274,7 +274,7 @@ cardTodo.addEventListener('click', (event) => {
 					}
 				})
 
-				const newTodoProgres = { id: todoId, title: document.getElementById(`title-${todoId}`).textContent, description: document.getElementById(`description-${todoId}`).textContent, user: document.getElementById(`user-${todoId}`).value };
+				const newTodoProgres = { id: todoId, title: document.getElementById(`title-${todoId}`).textContent, description: document.getElementById(`description-${todoId}`).textContent, user: document.getElementById(`user-${todoId}`).textContent };
 				const todoToSaveProgress = oldTodoProgres ? [newTodoProgres, ...oldTodoProgres] : [newTodoProgres];
 
 				localStorage.setItem(PROGRESS_KEY, JSON.stringify(todoToSaveProgress));
@@ -360,7 +360,7 @@ cardProgress.addEventListener('click', (event) => {
 		} else if (action === 'complete') {
 			cardsDoneTask.append(todoWrap);
 			todoWrap.className = `todo-wrap done`;
-			todoWrap.style.backgroundColor = `rgba(100, 194, 194, 0.2)`;
+			todoWrap.style.backgroundColor = `background-color: rgba(38, 226, 243, 0.2)`;
 			pushButton.style.display = `none`;
 			editButton.style.display = `none`;
 			deleteButton.style.display = `flex`;
@@ -459,6 +459,7 @@ const initialPtrintTodoProgress = () => {
 		savedTodo.forEach(todo => {
 			const todoWrapper = todoCardCreate(todo, `flex`, `flex`, `none`, `none`, `none`);
 			cardsProgressTask.append(todoWrapper);
+			todoWrapper.style.backgroundColor = `rgba(200, 194, 194, 0.4)`;
 		});
 	}
 
@@ -471,6 +472,7 @@ const initialPtrintTodoDone = () => {
 		savedTodo.forEach(todo => {
 			const todoWrapper = todoCardCreate(todo, `none`, `none`, `none`, `flex`, `none`);
 			cardsDoneTask.append(todoWrapper);
+			todoWrapper.style.backgroundColor = `rgba(38, 226, 243, 0.2)`;
 		});
 	}
 
@@ -564,6 +566,7 @@ const dragAndDrop = () => {
 			deleteButton.style.display = `flex`;
 			backButton.style.display = `none`;
 			completeButton.style.display = `none`;
+			document.getElementById(`todo-${todoId}`).style.backgroundColor = 'rgba(' + getRandomInt(0, 255) + ', ' + getRandomInt(0, 255) + ', ' + getRandomInt(0, 255) + '0.1' + ')';
 			const oldTodo = JSON.parse(localStorage.getItem(TODO_KEY));
 			const newTodo = { id: todoId, title: document.getElementById(`title-${todoId}`).textContent, description: document.getElementById(`description-${todoId}`).textContent, user: document.getElementById(`user-${todoId}`).textContent };
 			const todoToSaveAdd = oldTodo ? [newTodo, ...oldTodo] : [newTodo];
@@ -576,8 +579,9 @@ const dragAndDrop = () => {
 			deleteButton.style.display = `none`;
 			backButton.style.display = `flex`;
 			completeButton.style.display = `flex`;
+			document.getElementById(`todo-${todoId}`).style.backgroundColor = `rgba(200, 194, 194, 0.4)`;
 			const oldTodoProgres = JSON.parse(localStorage.getItem(DONE_KEY));
-			const newTodoProgres = { id: todoId, title: document.getElementById(`title-${todoId}`).textContent, description: document.getElementById(`description-${todoId}`).textContent, user: document.getElementById(`user-${todoId}`).value };
+			const newTodoProgres = { id: todoId, title: document.getElementById(`title-${todoId}`).textContent, description: document.getElementById(`description-${todoId}`).textContent, user: document.getElementById(`user-${todoId}`).textContent };
 			const todoToSaveProgress = oldTodoProgres ? [newTodoProgres, ...oldTodoProgres] : [newTodoProgres];
 
 			localStorage.setItem(PROGRESS_KEY, JSON.stringify(todoToSaveProgress));
@@ -587,6 +591,7 @@ const dragAndDrop = () => {
 			deleteButton.style.display = `flex`;
 			backButton.style.display = `none`;
 			completeButton.style.display = `none`;
+			document.getElementById(`todo-${todoId}`).style.backgroundColor = `rgba(38, 226, 243, 0.2)`;
 			const oldTodoDone = JSON.parse(localStorage.getItem(DONE_KEY));
 			const newTodoDone = { id: todoId, title: document.getElementById(`title-${todoId}`).textContent, description: document.getElementById(`description-${todoId}`).textContent, user: document.getElementById(`user-${todoId}`).textContent };
 			const todoToSaveDone = oldTodoDone ? [newTodoDone, ...oldTodoDone] : [newTodoDone];
@@ -599,13 +604,13 @@ const dragAndDrop = () => {
 	}
 	function dragOver(e) {
 		e.preventDefault();
-		this.style.border = "2px dotted cyan";
+		
 	}
 	function dragEnter(e) {
 		e.preventDefault();
 	}
 	function dragLeave() {
-		this.style.border = "none";
+		
 	}
 
 
